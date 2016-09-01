@@ -1,0 +1,5 @@
+FROM nginx
+
+MAINTAINER damian.scherli@jls.ch
+
+COPY nginx.conf /etc/nginx/nginx.conf

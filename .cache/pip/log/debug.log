@@ -1,0 +1,51 @@
+You are using pip version 6.1.1, however version 8.1.2 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+Collecting docker-compose
+  Downloading docker-compose-1.8.0.tar.gz (149kB)
+Collecting cached-property<2,>=1.2.0 (from docker-compose)
+  Downloading cached_property-1.3.0-py2.py3-none-any.whl
+Collecting docopt<0.7,>=0.6.1 (from docker-compose)
+  Downloading docopt-0.6.2.tar.gz
+Requirement already satisfied (use --upgrade to upgrade): PyYAML<4,>=3.10 in /usr/lib64/python2.7/dist-packages (from docker-compose)
+Collecting requests<2.8,>=2.6.1 (from docker-compose)
+  Downloading requests-2.7.0-py2.py3-none-any.whl (470kB)
+Collecting texttable<0.9,>=0.8.1 (from docker-compose)
+  Downloading texttable-0.8.4.tar.gz
+Collecting websocket-client<1.0,>=0.32.0 (from docker-compose)
+  Downloading websocket_client-0.37.0.tar.gz (194kB)
+Collecting docker-py<2.0,>=1.9.0 (from docker-compose)
+  Downloading docker_py-1.9.0-py2.py3-none-any.whl (42kB)
+Collecting dockerpty<0.5,>=0.4.1 (from docker-compose)
+  Downloading dockerpty-0.4.1.tar.gz
+Requirement already satisfied (use --upgrade to upgrade): six<2,>=1.3.0 in /usr/lib/python2.7/dist-packages (from docker-compose)
+Collecting jsonschema<3,>=2.5.1 (from docker-compose)
+  Downloading jsonschema-2.5.1-py2.py3-none-any.whl
+Collecting enum34<2,>=1.0.4 (from docker-compose)
+  Downloading enum34-1.1.6-py2-none-any.whl
+Collecting backports.ssl-match-hostname>=3.5 (from docker-py<2.0,>=1.9.0->docker-compose)
+  Downloading backports.ssl_match_hostname-3.5.0.1.tar.gz
+Collecting ipaddress>=1.0.16 (from docker-py<2.0,>=1.9.0->docker-compose)
+  Downloading ipaddress-1.0.16-py27-none-any.whl
+Collecting functools32 (from jsonschema<3,>=2.5.1->docker-compose)
+  Downloading functools32-3.2.3-2.zip
+Installing collected packages: cached-property, docopt, requests, texttable, websocket-client, backports.ssl-match-hostname, ipaddress, docker-py, dockerpty, functools32, jsonschema, enum34, docker-compose
+  Exception:
+  Traceback (most recent call last):
+    File "/usr/lib/python2.7/dist-packages/pip/basecommand.py", line 246, in main
+      status = self.run(options, args)
+    File "/usr/lib/python2.7/dist-packages/pip/commands/install.py", line 352, in run
+      root=options.root_path,
+    File "/usr/lib/python2.7/dist-packages/pip/req/req_set.py", line 693, in install
+      **kwargs
+    File "/usr/lib/python2.7/dist-packages/pip/req/req_install.py", line 817, in install
+      self.move_wheel_files(self.source_dir, root=root)
+    File "/usr/lib/python2.7/dist-packages/pip/req/req_install.py", line 1018, in move_wheel_files
+      isolated=self.isolated,
+    File "/usr/lib/python2.7/dist-packages/pip/wheel.py", line 237, in move_wheel_files
+      clobber(source, lib_dir, True)
+    File "/usr/lib/python2.7/dist-packages/pip/wheel.py", line 215, in clobber
+      shutil.copyfile(srcfile, destfile)
+    File "/usr/lib64/python2.7/shutil.py", line 83, in copyfile
+      with open(dst, 'wb') as fdst:
+  IOError: [Errno 13] Permission denied: '/usr/local/lib/python2.7/site-packages/cached_property.pyc'
+
